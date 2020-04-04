@@ -23,9 +23,9 @@ class CodeGeneratorTest {
         assertThat(cCode, is("/* Add a product */\n" +
                 "/* to the 'on-order' list */\n" +
                 "typedef struct {\n" +
-                "\tint id;\n" +
-                "\tchar name[30];\n" +
-                "\tint order_code;\n" +
+                "  int id;\n" +
+                "  char name[30];\n" +
+                "  int order_code;\n" +
                 "} AddProductMsg;\n"));
     }
 }

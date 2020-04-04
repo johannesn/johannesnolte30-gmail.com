@@ -20,7 +20,7 @@ public class CLanguageGenerator implements LanguageGenerator {
 
     @Override
     public void addField(String type, String typeName, String dimension) {
-        builder.append("\t").append(type).append(" ").append(typeName);
+        builder.append("  ").append(type).append(" ").append(typeName);
         if (dimension != null) {
             builder.append("[").append(dimension).append("]");
         }
