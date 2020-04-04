@@ -1,5 +1,6 @@
 plugins {
     id 'java'
+    id 'idea' // optional (to generate IntelliJ IDEA project files)
 }
 
 group 'org.example'
@@ -12,5 +13,13 @@ repositories {
 }
 
 dependencies {
-    testCompile group: 'junit', name: 'junit', version: '4.12'
+    testImplementation('org.junit.jupiter:junit-jupiter:5.6.1')
+    testImplementation('org.hamcrest:hamcrest:2.2')
+}
+
+test {
+    useJUnitPlatform()
+    testLogging {
+        events "passed", "skipped", "failed"
+    }
 }
