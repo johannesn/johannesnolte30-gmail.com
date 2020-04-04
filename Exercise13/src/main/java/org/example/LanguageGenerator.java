@@ -1,13 +1,14 @@
 package org.example;
 
 public interface LanguageGenerator {
-    void startType();
 
-    void endType(String currentType);
+    void startType(String name);
+
+    void endType(String type);
 
     void addField(String type, String typeName, String dimension);
 
-    void addComment(String line);
+    void addComment(String comment);
 
     String getCode();
 }

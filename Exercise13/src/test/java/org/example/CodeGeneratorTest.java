@@ -28,4 +28,17 @@ class CodeGeneratorTest {
                 "  int order_code;\n" +
                 "} AddProductMsg;\n"));
     }
+
+    @Test
+    void testGenerateCodeInPascal() {
+        String pascalCode = new CodeGenerator("Pascal").generateCode(SCHEMA);
+
+        assertThat(pascalCode, is("{ Add a product }\n" +
+                "{ to the 'on-order' list }\n" +
+                "AddProductMsg = packed record\n" +
+                "  id: LongInt;\n" +
+                "  name: array[0..29] of char;\n" +
+                "  order_code: LongInt;\n" +
+                "end;\n"));
+    }
 }

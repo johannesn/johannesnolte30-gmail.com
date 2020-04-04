@@ -13,6 +13,9 @@ public class CodeGenerator {
         if ("C".equals(targetLanguage)) {
             this.languageGenerator = new CLanguageGenerator();
         }
+        if ("Pascal".equals(targetLanguage)) {
+            this.languageGenerator = new PascalLanguageGenerator();
+        }
     }
 
     public String generateCode(String source) {
@@ -21,11 +24,11 @@ public class CodeGenerator {
             char command = line.charAt(0);
             switch (command) {
                 case '#':
-                    languageGenerator.addComment(line);
+                    languageGenerator.addComment(line.substring(2));
                     break;
                 case 'M':
                     currentType = line.substring(2);
-                    languageGenerator.startType();
+                    languageGenerator.startType(currentType);
                     break;
                 case 'F':
                     Matcher matcher = FIELD_PATTERN.matcher(line);
