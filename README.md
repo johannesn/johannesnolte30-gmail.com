@@ -2,7 +2,7 @@
 
 In this repository I want to share my solutions to the exercises provided by the book "Pragmatic Programmer" by Andrew Hunt and David Thomas. 
 
-##Exercise 13
+## Exercise 13
 Goal of exercise 13 is to write a code generator for a given schema. The exercise defines the schema as follows: 
 
 A line that starts with: 
