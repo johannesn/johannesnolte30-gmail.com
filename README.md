@@ -3,7 +3,7 @@
 In this repository I want to share my solutions to the exercises provided by the book "Pragmatic Programmer" by Andrew Hunt and David Thomas. 
 
 ##Exercise 13
-Goal of exercise 13 is to write a code generator for a given schema. The exercise defines the schema as follows: 
+Goal of exercise 13 is to write a code generator that creates a source file in a specific programming language for message defined by a given schema. The exercise defines the schema as follows: 
 
 A line that starts with: 
 * a `#` is followed by a comment
